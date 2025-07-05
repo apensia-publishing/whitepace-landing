@@ -1,0 +1,221 @@
+#header {
+  width: 100%;
+  background: transparent;
+  background-color: var(--color-primary1);
+  padding: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#header .logo {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  gap: 0.5em;
+}
+
+#header .btns_wrapper .hamburger_btn {
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6em;
+  z-index: 100;
+}
+
+#header .hamburger_btn .line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  transform-origin: left;
+  transition: transform 0.25s ease-in-out;
+}
+
+#header .hamburger_btn .line:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Animation */
+#header .hamburger_btn.open .line:nth-child(1) {
+  transform: rotate(28deg);
+  transition: all 0.25s ease-in-out;
+  background-color: var(--color-black);
+}
+
+#header .hamburger_btn.open .line:nth-child(2) {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+#header .hamburger_btn.open .line:nth-child(3) {
+  transform: rotate(-28deg);
+  transition: all 0.25s ease-in-out;
+  background-color: var(--color-black);
+}
+
+/* Menus */
+#header .menus_wrapper {
+  color: var(--color-white);
+  display: flex;
+  gap: 5em;
+  display: none;
+  z-index: 400;
+}
+
+#header .menus_wrapper .menu_item_wrapper {
+  position: relative;
+}
+
+#header .menus_wrapper .menu {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  cursor: pointer;
+  position: relative;
+  padding: 0.5em 0;
+}
+
+#header .menus_wrapper .menu .arrow_icon {
+  margin-left: 0.5em;
+  transition: transform 0.2s ease-out;
+}
+
+#header .menus_wrapper .menu_item_wrapper:hover .arrow_icon {
+  transform: rotate(180deg);
+}
+
+/* Update dropdown menu styling */
+#header .menus_wrapper .menu_item_wrapper .modal_wrapper {
+  display: none;
+  width: 20rem;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#header .menus_wrapper .menu_item_wrapper:hover .modal_wrapper {
+  display: block;
+}
+
+.modal_item {
+  font-size: 1.75rem;
+  color: var(--color-black);
+  padding: 1em;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modal_item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#header .btns_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  z-index: 500;
+}
+
+#header .btns_wrapper .utils_btn_wrapper {
+  display: none;
+}
+
+#hero {
+  width: 100%;
+  /* min-height: 90svh; */
+  background-color: var(--color-primary1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10em;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  padding: 2.5em;
+  gap: 1em;
+}
+
+#hero .text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  max-width: 600px;
+}
+
+#hero .text_wrapper h1 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+#hero .text_wrapper h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+#hero .image_wrapper {
+  background-image: url("https://images.pexels.com/photos/6285080/pexels-photo-6285080.jpeg");
+  aspect-ratio: 16/ 9;
+  width: 100%;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    padding: 3.2em;
+  }
+
+  #header .btns_wrapper .utils_btn_wrapper {
+    display: flex;
+    gap: 1em;
+  }
+
+  #header .btns_wrapper .utils_btn_wrapper .util_btn {
+    font-size: 1.8rem;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  #header .btns_wrapper .utils_btn_wrapper .login {
+    background-color: var(--color-yellow);
+    padding: 1em 2em;
+    color: var(--color-black);
+  }
+
+  #header .btns_wrapper .utils_btn_wrapper .try {
+    background-color: var(--color-skyblue);
+    color: var(--color-white);
+    padding: 1em;
+  }
+
+  #header .try .right_arrow_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #header .btns_wrapper .hamburger_btn {
+    display: none;
+  }
+
+  #header .menus_wrapper {
+    display: flex;
+  }
+}
