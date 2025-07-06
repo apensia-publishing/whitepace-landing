@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
 }
 
 #header .logo {
@@ -137,7 +136,7 @@
 
 #hero {
   width: 100%;
-  /* min-height: 90svh; */
+  min-height: 100svh;
   background-color: var(--color-primary1);
   display: flex;
   flex-direction: column;
@@ -146,7 +145,13 @@
   align-items: center;
   color: var(--color-white);
   padding: 2.5em;
-  gap: 1em;
+  gap: 10em;
+  position: relative;
+  z-index: 1;
+  background-image: url("../hero_bg.svg");
+  background-repeat: no-repeat;
+  /* background-position: 40%; */
+  background-size: cover;
 }
 
 #hero .text_wrapper {
@@ -154,6 +159,7 @@
   flex-direction: column;
   gap: 3em;
   max-width: 600px;
+  text-align: center;
 }
 
 #hero .text_wrapper h1 {
@@ -172,7 +178,14 @@
   background-image: url("https://images.pexels.com/photos/6285080/pexels-photo-6285080.jpeg");
   aspect-ratio: 16/ 9;
   width: 100%;
+  max-width: 70vw;
   background-size: cover;
+}
+
+/* Project Management section */
+#project_mgmt {
+  width: 100%;
+  height: 100svh;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,6 +220,16 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  #hero {
+    flex-direction: row;
+  }
+
+  #hero .text_wrapper {
+    text-align: initial;
   }
 }
 

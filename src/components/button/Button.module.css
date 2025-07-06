@@ -1,0 +1,10 @@
+.button {
+  background-color: var(--color-skyblue);
+  color: var(--color-white);
+}
+
+.button .right_arrow_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5em;
+}

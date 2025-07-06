@@ -4,6 +4,7 @@ import rightArrow from "/icons/right_arrow.png";
 import { Link } from "react-router";
 import HamburgerMenu from "../components/hamburger/HamburgerMenu";
 import Modal from "../components/modal/Modal";
+import Button from "../components/button/Button";
 
 type HamburgerButtonProps = {
   hamburgerOpen: boolean;
@@ -41,7 +42,7 @@ export default function HeroPage() {
   return (
     <>
       <main>
-        <HamburgerMenu hamburgerOpen={hamburgerOpen} />
+        {/* <HamburgerMenu hamburgerOpen={hamburgerOpen} /> */}
         <header id={style.header}>
           <Link to="/" className={style.logo}>
             <img src="../logo.svg" alt="Logo" />
@@ -79,14 +80,7 @@ export default function HeroPage() {
               <Link to="/" className={`${style.util_btn} ${style.login}`}>
                 Login
               </Link>
-              <Link to="/" className={`${style.util_btn} ${style.try}`}>
-                Try Whitepace Free
-                <img
-                  src={rightArrow}
-                  alt="Right arrow icon"
-                  className={style.right_arrow_icon}
-                />
-              </Link>
+              <Button to="/" buttonText="Try Whitepace" />
             </ul>
             <HamburgerButton
               hamburgerOpen={hamburgerOpen}
@@ -103,6 +97,29 @@ export default function HeroPage() {
             </h2>
           </div>
           <div className={style.image_wrapper} />
+        </section>
+
+        {/* Info section */}
+        <section id={style.info}>
+          <div id={style.project_mgmt}>
+            <h1>Project Management</h1>
+            <p>
+              Images, videos, PDFs and audio files are supported. Create math
+              expressions and diagrams directly from the app. Take photos with
+              the mobile app and save them to a note.
+            </p>
+          </div>
+          <div id={style.work_together}>
+            <div className={style.image_wrapper} />
+            <div className={style.text_wrapper}>
+              <h1>Work Together</h1>
+              <p>
+                With whitepace, share your notes with your colleagues and
+                collaborate on them. You can also publish a note to the internet
+                and share the URL with others.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
     </>
