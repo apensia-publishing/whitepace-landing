@@ -1,6 +1,6 @@
 import style from "./page.module.css";
 import { useState } from "react";
-import rightArrow from "/icons/right_arrow.png";
+// import workTogetherImage from "../../assets/hero_page/work_together.svg";
 import { Link } from "react-router";
 import HamburgerMenu from "../components/hamburger/HamburgerMenu";
 import Modal from "../components/modal/Modal";
@@ -101,16 +101,28 @@ export default function HeroPage() {
 
         {/* Info section */}
         <section id={style.info}>
-          <div id={style.project_mgmt}>
-            <h1>Project Management</h1>
-            <p>
-              Images, videos, PDFs and audio files are supported. Create math
-              expressions and diagrams directly from the app. Take photos with
-              the mobile app and save them to a note.
-            </p>
+          <div className={style.content_wrapper} id={style.project_mgmt}>
+            <div className={style.text_wrapper}>
+              <h1>
+                Project
+                <br />
+                Management
+              </h1>
+              <p>
+                Images, videos, PDFs and audio files are supported. Create math
+                expressions and diagrams directly from the app. Take photos with
+                the mobile app and save them to a note.
+              </p>
+              <Button to="/" buttonText="Get Started" />
+            </div>
+            <div className={style.image_wrapper}>
+              <img
+                src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg"
+                alt="Project management background image"
+              />
+            </div>
           </div>
-          <div id={style.work_together}>
-            <div className={style.image_wrapper} />
+          <div className={style.content_wrapper} id={style.work_together}>
             <div className={style.text_wrapper}>
               <h1>Work Together</h1>
               <p>
@@ -118,6 +130,10 @@ export default function HeroPage() {
                 collaborate on them. You can also publish a note to the internet
                 and share the URL with others.
               </p>
+              <Button to="/" buttonText="Get Started" />
+            </div>
+            <div className={style.image_wrapper}>
+              <img src="ui/work_together.svg" alt="Work Together image" />
             </div>
           </div>
         </section>

@@ -150,7 +150,6 @@
   z-index: 1;
   background-image: url("../hero_bg.svg");
   background-repeat: no-repeat;
-  /* background-position: 40%; */
   background-size: cover;
 }
 
@@ -183,9 +182,70 @@
 }
 
 /* Project Management section */
-#project_mgmt {
+#info {
   width: 100%;
-  height: 100svh;
+  min-height: 100svh;
+  padding: 20em 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20em;
+}
+
+#info h1 {
+  font-size: clamp(4rem, 10vw, 7rem);
+  text-align: center;
+  position: relative;
+  width: fit-content;
+}
+
+#info h1:after {
+  content: url("../ui/underline_deco.svg");
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  width: 100%;
+  max-width: 30rem;
+  z-index: -1;
+}
+
+#info .content_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10em;
+  width: 100%;
+}
+
+#info .content_wrapper .text_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+  width: 60%;
+  text-align: center;
+}
+
+#info .content_wrapper p {
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-bottom: 5em;
+}
+
+#info .content_wrapper .image_wrapper,
+#info .content_wrapper .image_wrapper img {
+  width: 100%;
+}
+
+#info #project_mgmt .image_wrapper {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: auto;
+}
+
+#info #work_together .image_wrapper {
+  max-width: 45rem;
+  aspect-ratio: 1 / 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -228,8 +288,37 @@
     flex-direction: row;
   }
 
+  #info .content_wrapper {
+    flex-direction: row;
+  }
+
   #hero .text_wrapper {
     text-align: initial;
+  }
+
+  /* Info section */
+  #info .content_wrapper .text_wrapper {
+    align-items: initial;
+  }
+
+  #info h1 {
+    text-align: initial;
+  }
+
+  #info .content_wrapper .text_wrapper p {
+    max-width: 45rem;
+    width: 100%;
+    text-align: initial;
+    margin-bottom: 0;
+  }
+
+  #info #work_together {
+    flex-direction: row-reverse;
+  }
+
+  #info #work_together .image_wrapper {
+    max-width: auto;
+    width: 100%;
   }
 }
 

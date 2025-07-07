@@ -1,6 +1,6 @@
 import style from "./Button.module.css";
 import { Link } from "react-router";
-import rightArrow from "/icons/right_arrow.png";
+import rightArrow from "/icons/right_arrow.svg";
 
 type ButtonProps = {
   to: string;
