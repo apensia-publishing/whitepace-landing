@@ -100,7 +100,7 @@ export default function HeroPage() {
         </section>
 
         {/* Info section */}
-        <section id={style.info}>
+        <section id="info" className={`${style.section} ${style.info}`}>
           <div className={style.content_wrapper} id={style.project_mgmt}>
             <div className={style.text_wrapper}>
               <h1>
@@ -134,6 +134,28 @@ export default function HeroPage() {
             </div>
             <div className={style.image_wrapper}>
               <img src="ui/work_together.svg" alt="Work Together image" />
+            </div>
+          </div>
+        </section>
+
+        {/* Extra Info Section */}
+        <section
+          id="extra_info"
+          className={`${style.section} ${style.extra_info}`}
+        >
+          <div className={style.content_wrapper}>
+            <div className={style.text_wrapper}>
+              <h1>Use as Extension</h1>
+              <p>
+                Use the web clipper extension, available on Chrome and Firefox,
+                to save web pages or take screenshots as notes.
+              </p>
+            </div>
+            <div className={style.image_wrapper}>
+              <img
+                src="https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg"
+                alt=""
+              />
             </div>
           </div>
         </section>
